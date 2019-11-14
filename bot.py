@@ -2,8 +2,11 @@ import requests
 from checker import Checker
 from random import random
 import time
-import credentials
 from os import environ
+try:
+	import credentials
+except ImportError:
+	pass 
 
 bot_token = environ.get('BOT_TOKEN') or credentials.BOT_TOKEN
 bot_chatID = environ.get('BOT_CHAT_ID') or credentials.BOT_CHAT_ID
