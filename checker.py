@@ -14,6 +14,9 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.common.exceptions import NoSuchElementException
 
+GOOGLE_CHROME_PATH = '/app/.apt/usr/bin/google_chrome'
+CHROMEDRIVER_PATH = '/app/.chromedriver/bin/chromedriver'
+
 #config = ConfigParser.ConfigParser()
 
 # def check_errors(id):
@@ -38,8 +41,6 @@ class Checker:
 		self.driver = None
 
 	def initiate_webdriver(self):
-		GOOGLE_CHROME_PATH = '/app/.apt/usr/bin/google_chrome'
-		CHROMEDRIVER_PATH = '/app/.chromedriver/bin/chromedriver'
 		options = webdriver.ChromeOptions()
 		options.add_argument("window-size=1920,1080");
 		options.add_argument('headless')
