@@ -1,6 +1,5 @@
 import os
 import ast
-#import ConfigParser
 import time
 from random import random
 
@@ -16,8 +15,6 @@ from selenium.common.exceptions import NoSuchElementException
 
 GOOGLE_CHROME_PATH = '.apt/usr/bin/google_chrome'
 CHROMEDRIVER_PATH = '.chromedriver/bin/chromedriver'
-
-#config = ConfigParser.ConfigParser()
 
 # def check_errors(id):
 # 	total_retries = 5
