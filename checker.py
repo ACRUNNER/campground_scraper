@@ -2,7 +2,6 @@ import os
 import ast
 import time
 from random import random
-
 from datetime import datetime, timedelta, date
 
 from selenium import webdriver
