@@ -6,7 +6,6 @@ from random import random
 
 from datetime import datetime, timedelta, date
 
-#import chromedriver_binary
 from selenium import webdriver
 from selenium.webdriver.support.ui import Select
 from selenium.webdriver.support import expected_conditions as EC
