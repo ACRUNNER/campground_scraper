@@ -6,7 +6,7 @@ from random import random
 
 from datetime import datetime, timedelta, date
 
-
+#import chromedriver_binary
 from selenium import webdriver
 from selenium.webdriver.support.ui import Select
 from selenium.webdriver.support import expected_conditions as EC
@@ -39,11 +39,14 @@ class Checker:
 		self.driver = None
 
 	def initiate_webdriver(self):
+		GOOGLE_CHROME_PATH = '/app/.apt/usr/bin/google_chrome'
+		CHROMEDRIVER_PATH = '/app/.chromedriver/bin/chromedriver'
 		options = webdriver.ChromeOptions()
 		options.add_argument("window-size=1920,1080");
 		options.add_argument('headless')
 		options.add_argument("user-agent=Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.97 Safari/537.36")
-		self.driver = webdriver.Chrome(chrome_options = options)
+		options.binary_location = GOOGLE_CHROME_PATH
+		self.driver = webdriver.Chrome(executable_path = CHROMEDRIVER_PATH, chrome_options = options)
 
 
 	def go_to_angel_island(self):
