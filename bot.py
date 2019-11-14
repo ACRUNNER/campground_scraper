@@ -28,7 +28,7 @@ while True:
 		test = telegram_bot_sendtext("Found a website! Campground: " + result[1] + " Date: " + result[0])
 	else:
 		print 'Found Nothing'
-		#test = telegram_bot_sendtext("Found Nothing")
+		test = telegram_bot_sendtext("Found Nothing")
 
 	rand_number = random()
 	time.sleep(60 * 30 + (60 * 60 * rand_number))
